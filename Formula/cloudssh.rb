@@ -5,15 +5,15 @@
 class Cloudssh < Formula
   desc "k9s-style terminal UI to browse cloud resources and SSH into them"
   homepage "https://github.com/cloudssh-cli/cloudssh"
-  version "0.1.0"
+  version "0.1.1"
   license "MIT"
 
   depends_on "openssh" => :optional
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/cloudssh-cli/cloudssh/releases/download/v0.1.0/cloudssh_0.1.0_darwin_amd64.tar.gz"
-      sha256 "1af8a6dd0667c0d7cda30a9afb7c930e0962e6a77de1ebe9a645355005df2f8b"
+      url "https://github.com/cloudssh-cli/cloudssh/releases/download/v0.1.1/cloudssh_0.1.1_darwin_amd64.tar.gz"
+      sha256 "4c9efa4a24052c2487fea8204f85eca83f87b23f630dea6b84ce6a5f80d047c9"
 
       define_method(:install) do
         bin.install "cloudssh"
@@ -23,8 +23,8 @@ class Cloudssh < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/cloudssh-cli/cloudssh/releases/download/v0.1.0/cloudssh_0.1.0_darwin_arm64.tar.gz"
-      sha256 "52e016e853aad94af15dfd791caeda5f6a4cf8181eeb5b1362267bab3c0f02da"
+      url "https://github.com/cloudssh-cli/cloudssh/releases/download/v0.1.1/cloudssh_0.1.1_darwin_arm64.tar.gz"
+      sha256 "1d7b1b31cf5f722b112eec11f3c03fac44b4ed844c85f6e16934d7e62d9a9db0"
 
       define_method(:install) do
         bin.install "cloudssh"
@@ -37,8 +37,8 @@ class Cloudssh < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/cloudssh-cli/cloudssh/releases/download/v0.1.0/cloudssh_0.1.0_linux_amd64.tar.gz"
-      sha256 "9f144360711b44642fc29d014cbc11c1b2f3f849aa7f22536a09c6a5855fa24a"
+      url "https://github.com/cloudssh-cli/cloudssh/releases/download/v0.1.1/cloudssh_0.1.1_linux_amd64.tar.gz"
+      sha256 "58b608c0437f323ff99addfd9da504e1f0dc5bb7c78f6b84d0a666c9d35512c9"
       define_method(:install) do
         bin.install "cloudssh"
         bash_completion.install "completions/cloudssh.bash" => "cloudssh"
@@ -47,8 +47,8 @@ class Cloudssh < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/cloudssh-cli/cloudssh/releases/download/v0.1.0/cloudssh_0.1.0_linux_arm64.tar.gz"
-      sha256 "40bc34482490d8577721fb404e248b0eadae171a47241c2d732892852cd42c2d"
+      url "https://github.com/cloudssh-cli/cloudssh/releases/download/v0.1.1/cloudssh_0.1.1_linux_arm64.tar.gz"
+      sha256 "a4d5ffde9b0af96c966d954b7d61a57bd7c1f0784eae8dfceb9cf5bf1da0185c"
       define_method(:install) do
         bin.install "cloudssh"
         bash_completion.install "completions/cloudssh.bash" => "cloudssh"
